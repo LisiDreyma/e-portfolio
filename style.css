@@ -40,7 +40,7 @@ a {
   transition: all 300ms ease;
 } 
 
-.link__hover:hover:after {
+.link__hover-effect:hover:after {
   width: 100%;
   left: 0;
 }
@@ -72,6 +72,7 @@ li {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 12px;
 }
 
 .text--purple {
@@ -220,6 +221,7 @@ nav {
 
 .language__list {
   display: flex;
+  justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -374,6 +376,61 @@ footer {
 
 @media (max-width: 768px) {
   nav {
-    height: 28px;
+    height: 68px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .about-me__info--para {
+    font-size: 18px;
+  }
+
+  .language {
+    width: calc(100% / 3);
+  }
+
+  .project__description--para {
+    font-size: 14px;
+  }
+}
+
+.project__description {
+  left: 60px;
+  padding-right: 30px;
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+  .nav__link:not(:last-child) {
+    display: none;
+  }
+
+  .project__description {
+    padding: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description--links {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project__description--title {
+    font-size: 32px;
+    line-height: 1
+    text-align: center
+  }
+
+  .project__description--sub-title {
+    text-align: center;
+    margin: 12px 0;
   }
 }
